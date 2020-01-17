@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/apprun@latest/dist/apprun-html.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Sound Station</h1>
+            <img src="soundwave.png"/>
+        </header>
+
+        <div id="orientationWarning">
+            <p>Please rotate screen horizontally</p>
+        </div>
+
+        <div id="middle">
+
+            <!-- Interractive Grid JS -->
+            <main id="main">
+
+            </main>
+            
+            <!-- Audio Visuals -->
+            <canvas id="canvas">
+
+            </canvas>
+
+        </div>
+
+        <!-- Playback controls -->
+        <nav>
+            <input onclick="app.run('pause')" class="clicked" id="pause" type="image" src="PB-Pause.png" name="pause">
+            <input onclick="stopWorker()" class="clicked" id="stop" type="image" src="PB-Stop.png" name="stop">
+            <input onclick="startWorker()" class="clicked" id="play" type="image" src="PB-Play.png" name="play">
+            <input onclick="ff()" class="clicked" id="ff" type="image" src="PB-Fast-forward.png" name="ff">
+            <input onclick="record()" class="clicked" id="record" type="image" src="PB-Microphone.png" name="record">
+            <!-- <img onclick="pause()" id="pause" src="PB-Pause.png"/>
+            <img onclick="stopWorker()" id="stop" src="PB-Stop.png"/>
+            <img onclick="startWorker(), pulse()" id="play" src="PB-Play.png"/>
+            <img onclick="ff()" id="ff" src="PB-Fast-forward.png"/>
+            <img onclick="record()" id="record" src="PB-Microphone.png"/> -->
+            <button onclick="app.run('selectAll')">Select All</button>
+        </nav>
+
+        <footer>
+            <p> &copy;SoundStation Ltd</p>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="visuals.js"></script>
+        <script src="geolocator.js"></script>
+        <script src="interractiveGrid.js"></script>
+    </body>
+</html>
